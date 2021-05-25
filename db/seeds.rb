@@ -5,3 +5,11 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+puts 'Creating articles...'
+
+10.times {
+  new_article = Article.new(title: Faker::Music::Prince.song, content: Faker::Music::Prince.lyric)
+  new_article.save
+}
+
+puts '...done seeding!'
